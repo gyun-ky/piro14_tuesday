@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block stylesheet %}{% endblock %}
+
+    <title>{% block title_name %}{% endblock %}</title>
+</head>
+<body>
+
+    <div>
+        
+        {% include "partials/header.html" %}
+        {% block main_content %}
+       
+        {% endblock main_content %}
+        {% include "partials/footer.html" %}
+
+    </div>
+
+</body>
+</html>

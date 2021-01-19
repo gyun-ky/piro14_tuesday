@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block stylesheet %}
+{% endblock stylesheet %}
+
+
+{% block main_content %}
+<form method="POST" action="{% url 'products:product_create' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="title">
+    <input type="file" name="main_image">
+    <input type="file" name="product_imgs" multiple>
+    <input type="submit" value="작성하기">
+</form>
+{% endblock main_content %}
